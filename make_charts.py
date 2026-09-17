@@ -55,8 +55,8 @@ def style(ax, ylabel=None, ymax=None):
 # ── 차트 A. 개선 요약 ────────────────────────────────────────────────
 def chart_improvement():
     labels = ["라우팅\n정확도", "라우팅\nmacro F1", "1턴 답변\n통과율", "실전\n자동화율"]
-    before = [92.5, 92.9, 62.5, 7.5]
-    after = [98.3, 98.7, 81.2, 12.5]
+    before = [94.2, 94.5, 57.3, 7.5]
+    after = [98.0, 98.4, 77.1, 12.5]
 
     fig, ax = plt.subplots(figsize=(8.4, 4.6))
     xs = range(len(labels))
@@ -73,7 +73,7 @@ def chart_improvement():
     ax.set_xticks(list(xs))
     ax.set_xticklabels(labels, color=INK2)
     style(ax, ylabel="%", ymax=118)
-    ax.set_title("모두몰 고객응대 에이전트 — 개선 전후", fontsize=14, color=INK,
+    ax.set_title("모두몰 고객응대 에이전트 — 개선 전후 (각 3회 측정 평균)", fontsize=14, color=INK,
                  pad=16, loc="left", fontweight="bold")
     ax.legend(frameon=False, loc="upper right", ncols=2, fontsize=10, labelcolor=INK2)
     fig.tight_layout()
